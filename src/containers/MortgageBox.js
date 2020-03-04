@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import MortgageList from '../components/MortgageList'
+import MortgageForm from '../components/MortgageForm'
 
 class MortgageBox extends Component{
 
@@ -10,10 +11,13 @@ constructor(props) {
   }
 }
 
+
+
   render (){
     return (
       <article>
       <h1> Test! </h1>
+      <MortgageForm />
       <MortgageList mortgages={this.state.mortgages}/>
       </article>
     )
