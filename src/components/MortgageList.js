@@ -8,6 +8,7 @@ const mortgageComponents = mortgages.map(mortgage => {
   return (
     <Mortgage
     salary={mortgage.salary}
+    propertyValue={mortgage.propertyValue}
     key={mortgage.id}
   >
   {mortgage.salary}
@@ -20,7 +21,7 @@ const mortgageComponents = mortgages.map(mortgage => {
 
   return (
     <Fragment>
-    <h1> List test </h1>
+    <h1> Maximum values displayed: </h1>
     <ul className="mortgage-list">
     {mortgageComponents}
     </ul>

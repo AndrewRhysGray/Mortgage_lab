@@ -7,12 +7,7 @@ class MortgageBox extends Component{
 constructor(props) {
   super (props)
   this.state = {
-    mortgages: [
-      {
-        id: 1,
-        salary: 500
-      }
-    ]
+    mortgages: []
   }
   this.handleMortgageAddition =  this.handleMortgageAddition.bind(this)
 
@@ -30,7 +25,7 @@ handleMortgageAddition(mortgageToAdd){
 const maxPropertyValue = this.handleMortgageCalculation(mortgageToAdd)
 console.log(maxPropertyValue);
   mortgageToAdd.id = Date.now()
-  mortgageToAdd.salary = maxPropertyValue
+  mortgageToAdd.propertyValue = maxPropertyValue
   const updatedMortgages = [...this.state.mortgages, mortgageToAdd]
 
   this.setState({ mortgages: updatedMortgages})
@@ -40,7 +35,7 @@ console.log(maxPropertyValue);
   render (){
     return (
       <article>
-      <h1> Test! </h1>
+      <h1> Mortgage Calculator </h1>
       <MortgageForm
       onMortgageAddition = {this.handleMortgageAddition}/>
       <MortgageList mortgages={this.state.mortgages}/>

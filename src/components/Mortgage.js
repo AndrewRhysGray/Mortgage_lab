@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Mortgage ({salary}) {
+function Mortgage ({salary, propertyValue}) {
   return (
     <li>
-    <h4>{salary}</h4>
+    <h4>{propertyValue}</h4>
     </li>
   )
 }
