@@ -8,7 +8,7 @@ constructor(props) {
   super (props)
   this.state = {
     mortgages: [
-      
+
     ]
   }
   this.handleMortgageAddition =  this.handleMortgageAddition.bind(this)
@@ -16,7 +16,7 @@ constructor(props) {
 }
 
 handleMortgageCalculation(mortgage){
-  const intMortgage = parseInt(mortgage.salary)
+  const intMortgage = parseInt(mortgage.salary) + parseInt(mortgage.secondarySalary)
   const maximumAffordableProperty = intMortgage * 3
   return maximumAffordableProperty
   // return maximumAffordableProperty
@@ -38,6 +38,7 @@ console.log(maxPropertyValue);
     return (
       <article>
       <h1> Mortgage Calculator </h1>
+      <h5> Please enter primary and secondary salaries </h5>
       <MortgageForm
       onMortgageAddition = {this.handleMortgageAddition}/>
       <MortgageList mortgages={this.state.mortgages}/>

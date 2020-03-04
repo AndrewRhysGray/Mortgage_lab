@@ -26,7 +26,8 @@ this.setState({salary: event.target.value})
   handleMortgageSubmit(event){
     event.preventDefault()
     const newMortgage = {
-      salary: this.state.salary
+      salary: this.state.salary,
+      secondarySalary: this.state.secondarySalary
     }
     this.props.onMortgageAddition(newMortgage)
   }
@@ -35,13 +36,13 @@ this.setState({salary: event.target.value})
     return (
       <form onSubmit={this.handleMortgageSubmit}>
       <input
-      type ='text'
+      type ='number'
       placeholder='Primary salary'
       value={this.state.salary}
       onChange = {this.handlePrimarySalaryChange}
       />
       <input
-      type ='text'
+      type ='number'
       placeholder='Secondary salary'
       value={this.state.secondarySalary}
       onChange = {this.handleSecondarySalaryChange}

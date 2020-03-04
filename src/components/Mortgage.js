@@ -3,7 +3,7 @@ import React from 'react'
 function Mortgage ({salary, secondarySalary, propertyValue}) {
   return (
     <li>
-    <h4>{propertyValue}</h4>
+    <h4>£{propertyValue}.00</h4>
     </li>
   )
 }

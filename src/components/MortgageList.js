@@ -23,7 +23,7 @@ const mortgageComponents = mortgages.map(mortgage => {
 
   return (
     <Fragment>
-    <h1> Maximum values displayed: </h1>
+    <h1> Maximum combined value: </h1>
     <ul className="mortgage-list">
     {mortgageComponents}
     </ul>
