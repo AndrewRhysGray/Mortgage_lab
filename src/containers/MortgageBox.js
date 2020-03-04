@@ -16,8 +16,14 @@ constructor(props) {
 }
 
 handleMortgageCalculation(mortgage){
-  const intMortgage = parseInt(mortgage.salary) + parseInt(mortgage.secondarySalary)
-  const maximumAffordableProperty = intMortgage * 3
+  let intMortgage = parseInt(mortgage.salary) + parseInt(mortgage.secondarySalary) - parseInt(mortgage.otherCommitments)
+  const annualInterestRate = (parseInt(mortgage.interestRate) / 100)
+  for (let year = 0; year <= parseInt(mortgage.amortization); year++){
+    let annualInterestPayment = intMortgage * annualInterestRate
+    intMortgage -= annualInterestPayment
+  }
+  let maximumAffordableProperty = intMortgage * 3
+    maximumAffordableProperty += parseInt(mortgage.deposit)
   return maximumAffordableProperty
   // return maximumAffordableProperty
 }

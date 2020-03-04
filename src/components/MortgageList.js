@@ -9,7 +9,11 @@ const mortgageComponents = mortgages.map(mortgage => {
     <Mortgage
     salary={mortgage.salary}
     secondarySalary={mortgage.secondarySalary}
+    deposit={mortgage.deposit}
+    otherCommitments={mortgage.otherCommitments}
     propertyValue={mortgage.propertyValue}
+    interestRate={mortgage.interestRate}
+    amortization={mortgage.amortization}
     key={mortgage.id}
   >
   {mortgage.salary}
