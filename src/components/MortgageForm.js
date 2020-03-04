@@ -6,7 +6,7 @@ class MortgageForm extends Component {
     super (props)
     this.state = {
       salary: '',
-      secondarySalary: ''
+      secondarySalary: '0'
     }
     this.handlePrimarySalaryChange = this.handlePrimarySalaryChange.bind(this)
     this.handleSecondarySalaryChange = this.handleSecondarySalaryChange.bind(this)
@@ -20,6 +20,9 @@ this.setState({salary: event.target.value})
   }
 
   handleSecondarySalaryChange(event){
+    // if (event.target.value === '') {
+      // this.setState({secondarySalary: 0})
+
     this.setState({secondarySalary: event.target.value})
   }
 
