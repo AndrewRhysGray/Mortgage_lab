@@ -20,7 +20,7 @@ constructor(props) {
 
 handleMortgageAddition(mortgageToAdd){
   mortgageToAdd.id = Date.now()
-  const updatedMortgages = [...this.state.mortgage, mortgageToAdd]
+  const updatedMortgages = [...this.state.mortgages, mortgageToAdd]
 
   this.setState({ mortgages: updatedMortgages})
 }
