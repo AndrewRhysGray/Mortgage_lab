@@ -18,7 +18,18 @@ constructor(props) {
 
 }
 
+handleMortgageCalculation(mortgage){
+  const intMortgage = parseInt(mortgage.salary)
+  const maximumAffordableProperty = intMortgage * 3
+  console.log(intMortgage)
+  // return maximumAffordableProperty
+  // return maximumAffordableProperty
+}
+
+
 handleMortgageAddition(mortgageToAdd){
+const maxProperty = this.handleMortgageCalculation(mortgageToAdd)
+console.log(maxProperty);
   mortgageToAdd.id = Date.now()
   const updatedMortgages = [...this.state.mortgages, mortgageToAdd]
 
