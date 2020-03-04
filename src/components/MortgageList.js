@@ -8,10 +8,12 @@ const mortgageComponents = mortgages.map(mortgage => {
   return (
     <Mortgage
     salary={mortgage.salary}
+    secondarySalary={mortgage.secondarySalary}
     propertyValue={mortgage.propertyValue}
     key={mortgage.id}
   >
   {mortgage.salary}
+  // {mortgage.secondarySalary}
   </Mortgage>
 
   )

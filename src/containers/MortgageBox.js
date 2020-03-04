@@ -7,7 +7,9 @@ class MortgageBox extends Component{
 constructor(props) {
   super (props)
   this.state = {
-    mortgages: []
+    mortgages: [
+      
+    ]
   }
   this.handleMortgageAddition =  this.handleMortgageAddition.bind(this)
 
